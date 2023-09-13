@@ -47,7 +47,7 @@ table {
 /* my style here */
 body {
     font:20px/30px arial,sans-serif ;
-    background-image: url(img/bg2.jpg);
+    background-image: url(img/pexel.jpg);
 }
 .container {
     width: 1000px;
@@ -85,25 +85,49 @@ ul li {
     border-top: 5px solid #AAB7B8;
     border-bottom:5px solid #E5E7E9;
 }
-.content {
+.main {
+    width: 600px;
     padding: 20px;
+    box-sizing: border-box;
+    float: left;
 }
-.content h2 {
+.main h2 {
     font-size: 30px;
     font-weight: bolder;
 }
-.content .creator {
+.main .creator {
     padding-top: -5px;
     font-size: 15px;
 }
-.content .creator a {
+.main .creator a {
     color: #AAB7B8;
     text-decoration: none;
 
 }
-.content p {
+.main p {
     margin-bottom: 5px;
     font-size: 15px;
+}
+/* sidebar */
+
+.sidebar {
+    width: 300px;
+    float: right;
+    padding: 20px;
+}
+.sidebar h3 {
+    font-weight: bold;
+    color: #666;
+}
+.sidebar img {
+    width: 70px;
+    height: 70px;
+    float: left;
+    padding-right: 10px;
+    
+}
+.sidebar p {
+    font: 20px/30px arial;
 }
 .footer {
     background-color: #333;
@@ -113,4 +137,23 @@ ul li {
     color: aliceblue;
     text-align: center;
     font-size: 13px;
+}
+
+/* clear float */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
 }
