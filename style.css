@@ -47,11 +47,21 @@ table {
 /* my style here */
 body {
     font:20px/30px arial,sans-serif ;
-    background-image: url(img/bg2.jpg);
+    background-image: url(img/pexel.jpg);
+}
+.top-bar  {
+    position: fixed;
+    top : 0;
+    right: 0;
+    left: 0;
+    height: 40px;
+    background-color: #2C3E50;
+    opacity: 0.7;
+    z-index: 10000;
 }
 .container {
     width: 1000px;
-    margin: auto;
+    margin: 80px auto;
     background-color:#E5E7E9 ;
     background-size: cover;
     background-position: -50px 0;
@@ -59,6 +69,13 @@ body {
 .header {
     padding: 20px;
 }
+.container .ribbon {
+    width: 100px;
+    height: 100px;
+    margin-right: 47px;
+    float: right;
+}
+
 .header .judul {
     font-size: 40px;
     font-weight: bolder;
@@ -85,25 +102,50 @@ ul li {
     border-top: 5px solid #AAB7B8;
     border-bottom:5px solid #E5E7E9;
 }
-.content {
+.main {
+    width: 600px;
     padding: 20px;
+    box-sizing: border-box;
+    float: left;
 }
-.content h2 {
+.main h2 {
     font-size: 30px;
     font-weight: bolder;
 }
-.content .creator {
+.main .creator {
     padding-top: -5px;
     font-size: 15px;
 }
-.content .creator a {
+.main .creator a {
     color: #AAB7B8;
     text-decoration: none;
 
 }
-.content p {
+.main p {
     margin-bottom: 5px;
     font-size: 15px;
+}
+/* sidebar */
+
+.sidebar {
+    width: 300px;
+    float: right;
+    padding: 20px;
+}
+.sidebar h3 {
+    font-weight: bold;
+    color: #666;
+}
+.sidebar img {
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-top: 5px;
+    padding-right: 10px;
+    
+}
+.sidebar p {
+    font: 15px/20px arial,sans-serif;
 }
 .footer {
     background-color: #333;
@@ -113,4 +155,24 @@ ul li {
     color: aliceblue;
     text-align: center;
     font-size: 13px;
+}
+
+
+/* clear float */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
 }
