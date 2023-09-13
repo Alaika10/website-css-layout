@@ -49,9 +49,19 @@ body {
     font:20px/30px arial,sans-serif ;
     background-image: url(img/pexel.jpg);
 }
+.top-bar  {
+    position: fixed;
+    top : 0;
+    right: 0;
+    left: 0;
+    height: 40px;
+    background-color: #2C3E50;
+    opacity: 0.7;
+    z-index: 10000;
+}
 .container {
     width: 1000px;
-    margin: auto;
+    margin: 80px auto;
     background-color:#E5E7E9 ;
     background-size: cover;
     background-position: -50px 0;
@@ -59,6 +69,13 @@ body {
 .header {
     padding: 20px;
 }
+.container .ribbon {
+    width: 100px;
+    height: 100px;
+    margin-right: 47px;
+    float: right;
+}
+
 .header .judul {
     font-size: 40px;
     font-weight: bolder;
@@ -123,11 +140,12 @@ ul li {
     width: 70px;
     height: 70px;
     float: left;
+    margin-top: 5px;
     padding-right: 10px;
     
 }
 .sidebar p {
-    font: 20px/30px arial;
+    font: 15px/20px arial,sans-serif;
 }
 .footer {
     background-color: #333;
@@ -138,6 +156,7 @@ ul li {
     text-align: center;
     font-size: 13px;
 }
+
 
 /* clear float */
 .cf:before,
